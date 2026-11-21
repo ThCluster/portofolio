@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-sans text-neutral-950 antialiased;
+  }
+  ::selection {
+    @apply bg-neutral-900 text-white;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-neutral-900;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-6xl px-6;
+}
+
+/* Bouton principal : gris anthracite, s'éclaircit et se soulève au survol */
+@utility btn-primary {
+  @apply inline-flex items-center gap-2 rounded-full bg-neutral-800 px-6 py-3 text-sm font-semibold text-white shadow-[0_6px_20px_-6px_rgb(0_0_0/0.45)] transition duration-200 hover:-translate-y-0.5 hover:bg-neutral-600 active:translate-y-0;
+}
+
+/* Bouton secondaire : gris clair avec bordure */
+@utility btn-secondary {
+  @apply inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-neutral-100 px-6 py-3 text-sm font-semibold text-neutral-900 transition duration-200 hover:-translate-y-0.5 hover:border-neutral-400 hover:bg-neutral-200 active:translate-y-0;
+}
+
+@utility btn-icon {
+  @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 bg-neutral-100 text-neutral-700 transition duration-200 hover:-translate-y-0.5 hover:bg-neutral-800 hover:text-white;
+}
