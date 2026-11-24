@@ -136,9 +136,9 @@ export const projects: Project[] = [
     title: "ISTAG",
     context: "Freelance",
     description:
-      "Site vitrine de l'Institut Supérieur de Technologie Avancée de Gagnoa, établissement d'enseignement supérieur privé de la région du Gôh.",
-    tags: ["React.js", "TypeScript", "Tailwind CSS", "Vite"],
-    demo: "https://istag.onrender.com",
+      "Plateforme de préinscription en ligne de l'Institut Supérieur de Technologie Avancée de Gagnoa, établissement d'enseignement supérieur privé de la région du Gôh.",
+    tags: ["React.js", "TypeScript", "Tailwind CSS", "Vite", "Django REST"],
+    demo: "https://istag.ci",
     repo: "https://github.com/ThCluster/ISTAG",
   },
   {
